@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.8da766a2.css",
+    "main.js": "/Portfolio/static/js/main.7590493d.js",
+    "static/js/453.1407b060.chunk.js": "/Portfolio/static/js/453.1407b060.chunk.js",
+    "static/media/pic1.jpg": "/Portfolio/static/media/pic1.2e4986dcab118cf48b1b.jpg",
+    "static/media/instagram.png": "/Portfolio/static/media/instagram.74f52a093591196c4101.png",
+    "static/media/github.png": "/Portfolio/static/media/github.4a164b29f45bcc791ac2.png",
+    "static/media/mail.png": "/Portfolio/static/media/mail.402e1c4ffe97c2b9550d.png",
+    "static/media/DTU_Delhi_official_logo.png": "/Portfolio/static/media/DTU_Delhi_official_logo.92481e117eea5fd6db4c.png",
+    "static/media/NIC-logo2.png": "/Portfolio/static/media/NIC-logo2.713f4bbd7e15c89c3b07.png",
+    "static/media/linkedIn.png": "/Portfolio/static/media/linkedIn.506e323c61b0236bf4a4.png",
+    "static/media/TheMobiadz-Logo-Copy.png": "/Portfolio/static/media/TheMobiadz-Logo-Copy.1e23f910c59a8829017b.png",
+    "static/media/DAV LOGO.png": "/Portfolio/static/media/DAV LOGO.243bf963f8fb908b7003.png",
+    "static/media/cover2.png": "/Portfolio/static/media/cover2.5621a73f542a346d2ded.png",
+    "static/media/resume.png": "/Portfolio/static/media/resume.7bb15369317626361e4e.png",
+    "index.html": "/Portfolio/index.html",
+    "main.8da766a2.css.map": "/Portfolio/static/css/main.8da766a2.css.map",
+    "main.7590493d.js.map": "/Portfolio/static/js/main.7590493d.js.map",
+    "453.1407b060.chunk.js.map": "/Portfolio/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8da766a2.css",
+    "static/js/main.7590493d.js"
+  ]
+}
