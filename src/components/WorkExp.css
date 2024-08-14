@@ -1,0 +1,96 @@
+
+@import url("https://fonts.googleapis.com/css?family=DM+Sans:500,700&display=swap");
+
+#work{
+    padding: 5rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "DM Sans", sans-serif;
+    background-image: linear-gradient(to top, #c3aed6, #f8d7e3, #b0c6ff);
+}
+#work > h2{
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+    font-family: monospace;
+    padding: 3rem;
+    padding-top: 0;
+    color: blue;
+}
+
+.cardContainer {
+    perspective: 1000px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding: 1rem 0;
+}
+.cardContent {
+    border-radius: 3rem;
+    width: 500px;
+    height: 550px;
+    padding: 2rem;
+    color: white;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+
+    background: linear-gradient(145deg, #151515, #534c4c) padding-box, linear-gradient(to left, #f7ba2b 0%, #ea5358 100%) border-box;
+    border: 0.7rem solid transparent;
+}
+.frontSide, .backSide {
+    border-radius: 2.3rem;
+    padding: 1rem;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.frontSide {
+    z-index: 2;
+}
+.frontSide > * {
+    padding: 1rem 0;
+}
+.frontSide > h2 {
+    font-size: 1.4rem;
+}
+.frontSide > img {
+    padding: 2rem;
+    width: 90%;
+}
+.backSide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3rem;
+    background: linear-gradient(135deg, rgb(255, 0, 0), #4a90e2);
+    color: white;
+    transform: rotateY(180deg);
+}
+.flipLeft:hover{
+    transform: rotateY(-180deg);
+}
+.flipRight:hover {
+    transform: rotateY(180deg);
+}
+
+.backSide > p{
+    padding: 0.5rem;
+    font-size: x-large;
+}
+.backSide > ul > li{
+    padding: 0.5rem;
+}
+.backSide > ul > a{
+    padding: 0.5rem;
+    position: relative;
+    top: 1rem;
+    left: 0.5rem;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    background-color: aliceblue;
+    border: 1px solid black;
+}
