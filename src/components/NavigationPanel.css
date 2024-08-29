@@ -7,7 +7,7 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 1rem;
   background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/debut_light.png");
   z-index: 1;
 }
@@ -29,7 +29,7 @@
 .nav-item {
   cursor: pointer;
   color: orange;
-  padding: 20px;
+  padding: 1rem;
   text-decoration: none;
   transition: 0.3s;
   margin: 0 6px;
@@ -75,5 +75,80 @@
 @media (max-width: 580px) {
   .nav {
     overflow: auto;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .panel{
+    padding: 0 0.8rem;
+  }
+  .nav {
+    padding: 0 0.8rem;
+  }
+  .nav-item {
+    padding: 0.8rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  .panel{
+    padding: 0 0.6rem;
+  }
+  .nav {
+    padding: 0 0.6rem;
+  }
+  .nav-item {
+    padding: 0.6rem;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+  .panel{
+    padding: 0 0.6rem;
+  }
+  .nav {
+    padding: 0 0.6rem;
+  }
+  .nav-item {
+    padding: 0.6rem;
+    font-size: small;
+  }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .panel{
+    padding: 0 0.4rem;
+  }
+  .nav {
+    padding: 0 0.4rem;
+  }
+  .nav-item {
+    padding: 0.4rem;
+    font-size: x-small;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .panel{
+    padding: 0 0.4rem;
+  }
+  .nav {
+    padding: 0 0.4rem;
+  }
+  .nav-item {
+    padding: 0.4rem;
+    font-size: xx-small;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .panel{
+    padding: 0 0.4rem;
+  }
+  .nav {
+    padding: 0 0.4rem;
+  }
+  .nav-item {
+    padding: 0.4rem;
+    font-size: 7px;
   }
 }

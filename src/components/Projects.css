@@ -24,3 +24,59 @@
     border: 1px solid black;
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    #Projects{
+        padding: 2rem 4rem;
+    }
+    #Projects > h2{
+        font-size: 2.5rem;
+    }
+    
+    .project-item > h2{
+        padding: 1.8rem 0;
+        font-size: 1.8rem;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #Projects{
+        padding: 2rem;
+    }
+    #Projects > h2{
+        font-size: 2.5rem;
+    }
+    
+    .project-item > h2{
+        padding: 1.8rem 0;
+        font-size: 1.8rem;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #Projects{
+        padding: 2rem;
+    }
+    #Projects > h2{
+        font-size: 2.5rem;
+    }
+    
+    .project-item > h2{
+        padding: 1.8rem 0;
+        font-size: 1.8rem;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #Projects{
+        padding: 1.5rem;
+    }
+    #Projects > h2{
+        font-size: 2rem;
+    }
+    
+    .project-item > h2{
+        padding: 1.5rem 0;
+        font-size: 1.2rem;
+    }
+}

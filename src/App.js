@@ -10,9 +10,6 @@ import WorkExp from './components/WorkExp';
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Hey! Have you met Harsh Verma?</h1>
-      </header>
       
       <HomePage/>
       <Panel />

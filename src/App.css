@@ -5,8 +5,7 @@
 }
 
 body{
-  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
-  background-repeat: no-repeat;
+  background-color: black;
 }
 
 header{
@@ -17,5 +16,28 @@ header > h1{
   font-size: 3rem;
   font-family: cursive;
   padding: 3rem;
+}
+
+.App{
+  max-width: 1600px;
+  margin: 0 auto;
+  border: 1px solid black;
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+  background-repeat: no-repeat;
+}
+
+/* Apply to the whole page */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #9ab6ff;
+  border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0c5ff;
 }
 

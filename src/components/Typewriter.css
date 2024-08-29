@@ -1,0 +1,21 @@
+
+.typewriter {
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+    overflow: hidden;
+    border-right: 0.15rem solid orange;
+    white-space: nowrap;
+    letter-spacing: 0.15rem;
+    animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: orange; }
+}

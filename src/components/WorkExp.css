@@ -61,6 +61,7 @@
     width: 90%;
 }
 .backSide {
+    text-align: justify;
     position: absolute;
     top: 0;
     left: 0;
@@ -87,10 +88,194 @@
     padding: 0.5rem;
     position: relative;
     top: 1rem;
-    left: 0.5rem;
+    left: 35%;
     color: black;
     text-decoration: none;
     text-align: center;
     background-color: aliceblue;
     border: 1px solid black;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    #work{
+        padding: 2rem 4rem;
+    }
+    #work > h2{
+        font-size: 3rem;
+        padding: 2rem;
+        padding-top: 0;
+    }
+
+    .cardContent {
+        width: 400px;
+        height: 450px;        
+    }
+    .frontSide > h2 {
+        font-size: 1.1rem;
+    }
+    .frontSide > h3 {
+        font-size: 1rem;
+    }
+    .backSide {
+        padding: 2.5rem;
+    }
+    .backSide > p{
+        padding: 0.3rem;
+        font-size: large;
+    }
+    .backSide > ul > li{
+        padding: 0.3rem;
+        font-size: small;
+    }
+    .backSide > ul > a{
+        padding: 0.3rem;
+        font-size: small;
+    }      
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #work{
+        padding: 2rem;
+    }
+    #work > h2{
+        font-size: 3rem;
+        padding: 1.5rem;
+        padding-top: 0;
+    }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .cardContent {
+        width: 400px;
+        height: 450px;        
+    }
+    .frontSide > h2 {
+        font-size: 1.1rem;
+    }
+    .frontSide > h3 {
+        font-size: 1rem;
+    }
+    .backSide {
+        padding: 2.3rem;
+    }
+    .backSide > p{
+        padding: 0.3rem;
+        font-size: large;
+    }
+    .backSide > ul > li{
+        padding: 0.3rem;
+        font-size: small;
+    }
+    .backSide > ul > a{
+        padding: 0.3rem;
+        font-size: small;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #work{
+        padding: 2rem;
+    }
+    #work > h2{
+        font-size: 2.8rem;
+        padding: 1.5rem;
+        padding-top: 0;
+    }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .cardContent {
+        width: 400px;
+        height: 450px;        
+    }
+    .frontSide > h2 {
+        font-size: 1.1rem;
+    }
+    .frontSide > h3 {
+        font-size: 1rem;
+    }
+    .backSide {
+        padding: 2.3rem;
+    }
+    .backSide > p{
+        padding: 0.3rem;
+        font-size: large;
+    }
+    .backSide > ul > li{
+        padding: 0.3rem;
+        font-size: small;
+    }
+    .backSide > ul > a{
+        padding: 0.3rem;
+        font-size: small;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #work{
+        padding: 1.5rem;
+    }
+    #work > h2{
+        font-size: 2rem;
+        padding: 1.5rem;
+        padding-top: 0;
+    }
+
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 2rem;
+    }
+    .cardContent {
+        width: 300px;
+        height: 350px;
+        padding: 1rem;
+    }
+    .frontSide > h2 {
+        font-size: medium;
+        text-align: center;
+    }
+    .frontSide > h3 {
+        font-size: small;
+        text-align: center;
+    }
+    .backSide {
+        padding: 2rem;
+    }
+    .backSide > p{
+        padding: 0.3rem;
+        font-size: medium;
+    }
+    .backSide > ul > li{
+        padding: 0.3rem;
+        font-size: x-small;
+    }
+    .backSide > ul > a{
+        padding: 0.3rem;
+        top: 0.3rem;
+        font-size: x-small;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .cardContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+        gap: 1.5rem;
+    }
+    .cardContent {
+        width: 280px;
+        height: 360px;
+        padding: 0.5rem;
+    }
 }

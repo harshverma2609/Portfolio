@@ -62,3 +62,164 @@ footer > a > img{
     width: 2rem;
 }
 
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    #Contact{
+        padding: 2rem 4rem;
+    }
+    #Contact > h2{
+        font-size: 3rem;
+        padding: 0 3rem;
+    }
+    #Contact > p{
+        font-size: 1.6rem;
+        padding: 0 3.5rem;
+    }
+    
+    .form-container{
+        width: 50%;
+        margin: 0.8rem auto;
+    }
+    .form-container > form > textarea{
+        min-height: 8rem;
+    }
+
+    footer{
+        padding: 1.5rem;
+    }
+    footer > a{
+        padding: 0.5rem;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    #Contact{
+        padding: 2rem;
+    }
+    #Contact > h2{
+        font-size: 2.5rem;
+        padding: 0 2rem;
+    }
+    #Contact > p{
+        font-size: 1.5rem;
+        padding: 0 2.5rem;
+    }
+    
+    .form-container{
+        width: 50%;
+        margin: 0.5rem auto;
+    }
+    .form-container > form > input{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: small;
+    }
+    .form-container > form > textarea{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: medium;
+        min-height: 7rem;
+    }
+    .form-container > form > button{
+        margin: 1rem;
+        padding: 0.7rem;
+        width: 25%;
+        font-size: medium;
+    }
+
+    footer{
+        padding: 1rem;
+    }
+    footer > a{
+        padding: 0.5rem;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    #Contact{
+        padding: 2rem;
+    }
+    #Contact > h2{
+        font-size: 2.5rem;
+        padding: 0 1.5rem;
+    }
+    #Contact > p{
+        font-size: 1.5rem;
+        padding: 0 2rem;
+    }
+    
+    .form-container{
+        width: 60%;
+        margin: 0.5rem auto;
+    }
+    .form-container > form > input{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: small;
+    }
+    .form-container > form > textarea{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: medium;
+        min-height: 7rem;
+    }
+    .form-container > form > button{
+        margin: 1rem;
+        padding: 0.7rem;
+        width: 30%;
+        font-size: medium;
+    }
+
+    footer{
+        padding: 1rem;
+    }
+    footer > a{
+        padding: 0.5rem;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #Contact{
+        padding: 1.5rem;
+    }
+    #Contact > h2{
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    #Contact > p{
+        font-size: 1.2rem;
+        padding: 0 0 0 1.5rem;
+    }
+    
+    .form-container{
+        width: 80%;
+        margin: 0.5rem auto;
+    }
+    .form-container > form > input{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: small;
+    }
+    .form-container > form > textarea{
+        padding: 0.8rem;
+        margin: 0.8rem;
+        font-size: medium;
+        min-height: 7rem;
+    }
+    .form-container > form > button{
+        margin: 1rem;
+        padding: 0.7rem;
+        width: 30%;
+        font-size: medium;
+    }
+
+    footer{
+        padding: 1rem;
+    }
+    footer > a{
+        padding: 0.5rem;
+    }
+    footer > a > img{
+        width: 1.7rem;
+    }
+}

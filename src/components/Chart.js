@@ -45,7 +45,7 @@ const CGPAChart = () => {
     };
 
     return (
-        <div id="chart" style={{ height: '280px', width: '500px', padding: '2rem' }}>
+        <div id="chart">
             <Line data={data} options={options} />
         </div>
     );

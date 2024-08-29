@@ -19,14 +19,12 @@ const WorkExp =()=>{
                                 Designed and deployed advanced features using ReactJS and PHP, including responsive loaders and Swiper carousel sliders; now used in 10+ projects to enhance user experience.
                             </li>
                             <li>
-                                Integrated external APIs and services, including Amazon’s Product Advertising API 5.0 and Google Sheets, for efficient data exchange and lead generation.
-                            </li>
-                            <li>
-                                Created engaging landing pages and HTML5 ads for client product advertisements, boosting lead generation by 20% and improving client satisfaction.
+                                Integrated Amazon’s Product Advertising API 5.0 and Google Sheets for data exchange and lead generation, and created landing pages and HTML5 ads that boosted lead generation by 20% and improved client satisfaction.
                             </li>
                             <li>
                                 Crafted a custom Node.js API and implemented MySQL to enhance handling and processing of two-step form inputs, increasing data consistency and application performance.
                             </li>
+                            <a href='https://harshverma2609.github.io/GamingWebsite'>Demo Work</a>
                         </ul>
                     </div>
                 </div>

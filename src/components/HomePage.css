@@ -1,11 +1,11 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.wrapper,
-.content {
+.wrapper, .content {
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -25,9 +25,6 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  
-  /* background-image: url('./images/pic2.jpg');
-  width: 90%;   */
 }
 
 .image-container {
@@ -47,4 +44,131 @@
   height: 100%;
   object-fit: cover;
   object-position: center center;
+}
+
+.card {
+  position: absolute;
+  right: 5%;
+  top: 30%;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  width: 18rem;
+  height: auto;
+  padding: 1.5rem 1rem;
+
+  background: #171717;
+  border-top-right-radius: 1.2rem;
+  border-bottom-left-radius: 1.2rem;
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  clip-path: polygon(30px 0%, 100% 0, 100% calc(100% - 30px), calc(100% - 30px) 100%, 0 100%, 0% 30px);
+}
+
+.card > span {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 0.5rem;
+}
+
+.card > .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0.5rem;
+}
+
+.card > .img {
+  width: 4.8rem;
+  height: 4.8rem;
+  background: white;
+  border-radius: 1rem;
+  margin: 0.5rem auto;
+}
+
+.card > .img > img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.card > .share {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  gap: 1rem;
+}
+
+.share > a {
+  color: white;
+  transition: .4s ease-in-out;
+}
+
+.share > a:hover {
+  color: red;
+}
+
+.card > a {
+  margin: 0.5rem auto;
+}
+
+.card > a > button {
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: .4s ease-in-out;
+}
+
+.card > a > button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+  .card {
+    right: 1%;
+    top: 15%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  .card {
+    right: 2%;
+    top: 13%;
+  }  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+  .card {
+    right: 30%;
+    top: 10%;
+  }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .card {
+    right: 10%;
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .card {
+    right: 5%;
+    top: 10%;
+  }
 }

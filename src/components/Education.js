@@ -8,7 +8,7 @@ function Education(){
             <h2>Educational Qualifications</h2>
             <div>
                 <img src={require("./images/DTU_Delhi_official_logo.png")} alt='DTU LOGO' />
-                <div className='education'>
+                <div className='education' id='DTU'>
                     <h2>
                         Delhi Technological University (DTU)
                         <br/>
@@ -19,7 +19,7 @@ function Education(){
                     <h3>Bachelor Of Technology <br/> Information Technology <br/> 2021-2025</h3>
                     <h3>CGPA: 8.10/10.00</h3>
                 </div>
-                <CGPAChart />
+                <CGPAChart/>
             </div>
             <div>
                 <img src={require("./images/DAV LOGO.png")} alt='DAV LOGO' />
