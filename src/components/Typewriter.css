@@ -19,3 +19,46 @@
     from, to { border-color: transparent; }
     50% { border-color: orange; }
 }
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) and (max-width: 1200px){
+    .typewriter {
+        font-size: large;
+    }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .typewriter {
+        font-size: medium;
+        padding: 0.5rem;
+        left: 1%;
+    }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 768px){
+    .typewriter {
+        font-size: medium;
+        padding: 0.5rem;
+        top: 2%;
+        left: 2%;
+    }
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .typewriter {
+        font-size: medium;
+        padding: 0.5rem;
+        top: 5%;
+        left: 25%;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .typewriter {
+        font-size: x-small;
+        padding: 0.5rem;
+        top: 5%;
+        left: 25%;
+    }
+}
+
+

@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './Typewriter.css';
 
-const Typewriter = ({ text, speed = 200, eraseSpeed = 100, delay = 1000, eraseDelay = 4000, loop = true }) => {
+const Typewriter = ({ text, speed = 100, eraseSpeed = 50, delay = 1000, eraseDelay = 4000, loop = true }) => {
     const [displayedText, setDisplayedText] = useState('');
     const [index, setIndex] = useState(0);
     const [isErasing, setIsErasing] = useState(false);

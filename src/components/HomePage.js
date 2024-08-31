@@ -62,8 +62,8 @@ function HomePage() {
           text={[
             "Hi my name is\nHarsh Verma!\n\nI’m a C++ Developer\nand Web Developer.",
           ]}
-          speed={200}
-          eraseSpeed={100}
+          speed={100}
+          eraseSpeed={50}
           delay={1000}
           loop={true}
         />
@@ -71,7 +71,7 @@ function HomePage() {
 
       <div class="card">
         <div class="img">
-          <img src={require("./images/socials/instagram.png")} />
+          <img src={require("./images/logo1.png")} />
         </div>
         <span>About Me</span>
         <p class="info">

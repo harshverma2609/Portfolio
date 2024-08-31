@@ -62,6 +62,25 @@ footer > a > img{
     width: 2rem;
 }
 
+/* Add this CSS to animate the Send button */
+.button-sent {
+    animation: buttonSuccess 0.5s ease-out forwards;
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+@keyframes buttonSuccess {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) and (max-width: 1200px){
     #Contact{

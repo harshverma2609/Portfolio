@@ -1,18 +1,93 @@
-
+import React, { useState } from 'react';
 import './Contact.css';
 
-const Contact =()=>{
-    return(
+const Contact = () => {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [buttonClass, setButtonClass] = useState('');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Validate required fields
+        if (!name || !message) {
+            alert('Name and Message are required fields.');
+            return;
+        }
+
+        // Validate email format
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+
+        const data = {
+            Name: name,
+            Email: email,
+            Message: message,
+        };
+
+        try {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbxyvwCwjwfWDHoG_CGAcYn-aompPTjOF_DGJjjBlV7mWjLyV_M6B1o0engwvmpKtMzz/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (response.ok) {
+                alert('Your message was sent successfully!');
+                
+                // Trigger button animation
+                setButtonClass('button-sent');
+
+                // Clear the form after successful submission
+                setName('');
+                setEmail('');
+                setMessage('');
+
+                // Reset the button animation after a short delay
+                setTimeout(() => setButtonClass(''), 1500);
+            } else {
+                alert('There was an issue sending your message. Please try again later.');
+            }
+        } catch (error) {
+            alert('An error occurred: ' + error.message);
+        }
+    };
+
+    return (
         <section id='Contact'>
             <h2>Contact</h2>
             <p>Get in Touch</p>
 
             <div className='form-container'>
-                <form>
-                    <input id='name' placeholder='Enter Your Name: ' />
-                    <input id='email' placeholder='Enter Your Email: ' />
-                    <textarea id='message' placeholder='Enter Your Message: ' />
-                    <button>Send</button>
+                <form onSubmit={handleSubmit}>
+                    <input 
+                        id='name' 
+                        placeholder='Enter Your Name: ' 
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required 
+                    />
+                    <input 
+                        id='email' 
+                        placeholder='Enter Your Email: ' 
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required 
+                    />
+                    <textarea 
+                        id='message' 
+                        placeholder='Enter Your Message: ' 
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required 
+                    />
+                    <button type='submit' className={buttonClass}>Send</button>
                 </form>
             </div>
             
@@ -26,6 +101,6 @@ const Contact =()=>{
             </footer>
         </section>
     );
-}
+};
 
 export default Contact;
