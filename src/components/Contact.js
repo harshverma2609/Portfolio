@@ -30,12 +30,14 @@ const Contact = () => {
         };
 
         try {
+            console.log('Sending data:', data); // Debugging line
             const response = await fetch('https://script.google.com/macros/s/AKfycbxyvwCwjwfWDHoG_CGAcYn-aompPTjOF_DGJjjBlV7mWjLyV_M6B1o0engwvmpKtMzz/exec', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(data),
+                mode: 'no-cors'
             });
 
             if (response.ok) {
@@ -55,6 +57,7 @@ const Contact = () => {
                 alert('There was an issue sending your message. Please try again later.');
             }
         } catch (error) {
+            console.error('Error:', error); // Debugging line
             alert('An error occurred: ' + error.message);
         }
     };
