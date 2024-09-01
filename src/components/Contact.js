@@ -1,96 +1,75 @@
-import React, { useState } from 'react';
+
 import './Contact.css';
+import React, { useState } from "react";
 
-const Contact = () => {
-    const [name, setName] = useState('');
+const Contact =()=>{
+    const [fullName, setFullName] = useState('');
     const [email, setEmail] = useState('');
-    const [message, setMessage] = useState('');
-    const [buttonClass, setButtonClass] = useState('');
+    const [query, setQuery] = useState('');
+    const [emailError, setEmailError] = useState('');
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const handleFullNameChange = (event) => {
+        setFullName(event.target.value);
+    };
 
-        // Validate required fields
-        if (!name || !message) {
-            alert('Name and Message are required fields.');
-            return;
-        }
+    const handleEmailChange = (event) => {
+        const emailValue = event.target.value;
+        setEmail(emailValue);
 
-        // Validate email format
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address.');
-            return;
-        }
-
-        const data = {
-            Name: name,
-            Email: email,
-            Message: message,
-        };
-
-        try {
-            console.log('Sending data:', data); // Debugging line
-            const response = await fetch('https://script.google.com/macros/s/AKfycbxyvwCwjwfWDHoG_CGAcYn-aompPTjOF_DGJjjBlV7mWjLyV_M6B1o0engwvmpKtMzz/exec', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-                mode: 'no-cors'
-            });
-
-            if (response.ok) {
-                alert('Your message was sent successfully!');
-                
-                // Trigger button animation
-                setButtonClass('button-sent');
-
-                // Clear the form after successful submission
-                setName('');
-                setEmail('');
-                setMessage('');
-
-                // Reset the button animation after a short delay
-                setTimeout(() => setButtonClass(''), 1500);
-            } else {
-                alert('There was an issue sending your message. Please try again later.');
-            }
-        } catch (error) {
-            console.error('Error:', error); // Debugging line
-            alert('An error occurred: ' + error.message);
+        // Validate email address
+        if (!isValidEmail(emailValue)) {
+            setEmailError('Please enter a valid email address');
+        } else {
+            setEmailError('');
         }
     };
 
-    return (
+    const isValidEmail = (email) => {
+        // Regular expression for email validation
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailRegex.test(email);
+    };
+
+    const handleQueryChange = (event) => {
+        setQuery(event.target.value);
+    };
+
+    const handleSubmit = (e) => {
+        // Validate form fields before submitting
+        if (!isValidEmail(email)) {
+            setEmailError('Please enter a valid email address');
+            return;
+        }
+
+        const formEle = document.querySelector("form");
+        e.preventDefault();
+        const formData = new FormData(formEle);
+        fetch("https://script.google.com/macros/s/AKfycbz3fQ79YEx3H5mBGPpQLgbSzrDWXD4gj2aYxkVkvmXKHgsWTtvTgqZYI4wbrJid379U/exec", {
+            method: "POST",
+            body: formData
+        }).then((res) => res.json()).then((data) => {
+            console.log(data);
+        }).catch((error) => console.log(error));
+
+        // Clear form fields after submission
+        setFullName('');
+        setEmail('');
+        setQuery('');
+        alert('Form submitted!');
+    };
+
+    return(
         <section id='Contact'>
             <h2>Contact</h2>
             <p>Get in Touch</p>
 
             <div className='form-container'>
                 <form onSubmit={handleSubmit}>
-                    <input 
-                        id='name' 
-                        placeholder='Enter Your Name: ' 
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required 
-                    />
-                    <input 
-                        id='email' 
-                        placeholder='Enter Your Email: ' 
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required 
-                    />
-                    <textarea 
-                        id='message' 
-                        placeholder='Enter Your Message: ' 
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required 
-                    />
-                    <button type='submit' className={buttonClass}>Send</button>
+                    <input id='name' name="Name" placeholder='Enter Your Name: ' type="text" value={fullName} onChange={handleFullNameChange} required />
+                    <input id='email' name="Email" placeholder='Enter Your Email: ' type="text" value={email} onChange={handleEmailChange} required />
+                    {emailError && <p className="error-text">{emailError}</p>}
+                    <textarea id='message' name="Message" placeholder='Enter Your Message: ' type="text" value={query} onChange={handleQueryChange} required />
+                    <button type="submit">Send</button>
                 </form>
             </div>
             
@@ -104,6 +83,6 @@ const Contact = () => {
             </footer>
         </section>
     );
-};
+}
 
 export default Contact;

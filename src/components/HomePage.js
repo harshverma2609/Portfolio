@@ -60,7 +60,7 @@ function HomePage() {
         <img id="cover" src={require("./images/cover2.png")} alt="cover" />
         <Typewriter
           text={[
-            "Hi my name is\nHarsh Verma!\n\nI’m a C++ Developer\nand Web Developer.",
+            "Hi my name is\nHarsh Verma!\n\nI’m a C++ Developer\nand MERN Full Stack\nWeb Developer.",
           ]}
           speed={100}
           eraseSpeed={50}
